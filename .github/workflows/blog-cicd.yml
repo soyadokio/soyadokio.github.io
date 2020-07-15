@@ -1,0 +1,55 @@
+# 参照：https://xirikm.net/2020/313-1
+name: Blog CI/CD  # 部署 Blog 到 GitHub Pages
+
+on:
+  push:
+    branches: [ master ]  # 当且仅当 master 分支发生 push 事件时才会触发 workflow
+    paths-ignore:  # 下列文件的变更不触发 jobs
+      - '.github/workflows/**'
+      - '**.md'
+      - LICENSE
+      - .gitattributes
+
+jobs:
+  blog-cicd:
+    name: Hexo blog build & deploy  # 每次 commit 后自动部署 Blog 到 GitHub Pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 01.Checkout codes  # 检出代码
+        uses: actions/checkout@master
+
+      - name: 02.Setup nodeJS  # 配置 node 环境
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: 03.Cache node modules  # 设置 modules 缓存目录以免每次 workflow 都要重新下载，从而加快构建速度
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      #- name: Set time zone  # 设置时区
+
+      - name: 04.Install dependencies  # 安装依赖
+        run: |
+          npm install hexo-cli gulp -g
+          npm install
+
+      - name: 05.Generate files  # Hexo 生成文件
+        run: hexo generate
+
+      - name: 06.Execute gulp task  # 用 gulp 任务来压缩 Hexo 生成的文件
+        run: gulp
+
+      - name: Deploy blog  # 部署博客
+        run: |
+          git clone "https://soyadokio.github.io.git" deploy_git
+          mv ./deploy_git/.git ./public/
+          cd ./public
+          git config user.name "SoyaDokio"
+          git config user.email "soyadokio@hotmail.com"
+          git add .
+          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force --quiet "https://${{ secrets.GH_PAGES_ACCESS_TOKEN }}@soyadokio.github.io.git" master:master
