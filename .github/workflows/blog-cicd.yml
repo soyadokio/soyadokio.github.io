@@ -3,7 +3,7 @@ name: Blog CI/CD  # 部署 Blog 到 GitHub Pages
 
 on:
   push:
-    branches: [ master ]  # 当且仅当 master 分支发生 push 事件时才会触发 workflow
+    branches: [ hexo-src ]  # 当且仅当 master 分支发生 push 事件时才会触发 workflow
     paths-ignore:  # 下列文件的变更不触发 jobs
       - '.github/workflows/**'
       - '**.md'
