@@ -1,14 +1,19 @@
-# 参照：https://xirikm.net/2020/313-1
+# 参照1：https://xirikm.net/2020/313-1
+# 参照2：https://juejin.im/post/6854573218779381773
 name: Blog CI/CD  # 部署 Blog 到 GitHub Pages
 
 on:
   push:
-    branches: [ hexo-src ]  # 当且仅当 master 分支发生 push 事件时才会触发 workflow
-    paths-ignore:  # 下列文件的变更不触发 jobs
+    branches:
+      - hexo-src  # 当且仅当 master 分支发生 push 事件时才会触发本 workflow
+    paths-ignore:  # 下列文件/目录的变更不触发 jobs
       - '.github/workflows/**'
       - '**.md'
       - LICENSE
       - .gitattributes
+
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   blog-cicd:
@@ -17,9 +22,9 @@ jobs:
 
     steps:
       - name: 01.Checkout codes  # 检出代码
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
-      - name: 02.Setup nodeJS  # 配置 node 环境
+      - name: 02.Setup node  # 配置 node 环境
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -28,7 +33,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}  # 使用 package-lock.json 文件的 hash 值来标识缓存是否需要更新
 
       #- name: Set time zone  # 设置时区
 
@@ -38,18 +43,27 @@ jobs:
           npm install
 
       - name: 05.Generate files  # Hexo 生成文件
-        run: hexo generate
+        run: |
+          hexo clean
+          hexo generate
 
       - name: 06.Execute gulp task  # 用 gulp 任务来压缩 Hexo 生成的文件
         run: gulp
 
-      - name: Deploy blog  # 部署博客
+      - name: 07.Deploy blog  # 部署博客
+        env:
+          # Github 仓库
+          GITHUB_REPO: github.com/SoyaDokio/soyadokio.github.io.git
+          # Gitee 仓库
+          GITEE_REPO: gitee.com/sdokio/sdokio.git
+          # Coding 仓库
+          CODING_REPO: e.coding.net/sdokio/personal/blog.git
         run: |
-          git clone "https://soyadokio.github.io.git" deploy_git
-          mv ./deploy_git/.git ./public/
-          cd ./public
+          cd ./public && git init && git add .
           git config user.name "SoyaDokio"
-          git config user.email "soyadokio@hotmail.com"
+          git config user.email "zdqdj@qq.com"
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://${{ secrets.GH_PAGES_ACCESS_TOKEN }}@soyadokio.github.io.git" master:master
+          git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GITHUB_REPO" master:master
+          git push --force --quiet "https://sdokio:${{ secrets.GITEE_ACCESS_TOKEN }}@$GITEE_REPO" master:master
+          git push --force --quiet "https://sdokio:${{ secrets.CODING_ACCESS_TOKEN }}@$CODING_REPO" master:master
