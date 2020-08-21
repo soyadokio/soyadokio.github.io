@@ -39,21 +39,18 @@ jobs:
 
       - name: 04.Install dependencies  # 安装依赖
         run: |
-          npm install hexo-cli gulp -g
+          npm install -g hexo-cli
           npm install
 
-      - name: 05.Generate files  # Hexo 生成文件
+      - name: 05.Generate files  # 编译 markdown 文件
         run: |
           hexo clean
           hexo generate
 
-      - name: 06.Execute gulp task  # 用 gulp 任务来压缩 Hexo 生成的文件
-        run: gulp
-
-      - name: 07.Deploy blog  # 部署博客
+      - name: 06.Deploy blog  # 部署博客
         env:
           # Github 仓库
-          GITHUB_REPO: github.com/SoyaDokio/soyadokio.github.io.git
+          GH_REPO: github.com/SoyaDokio/soyadokio.github.io.git
           # Gitee 仓库
           GITEE_REPO: gitee.com/sdokio/sdokio.git
           # Coding 仓库
@@ -64,6 +61,6 @@ jobs:
           git config user.email "zdqdj@qq.com"
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GITHUB_REPO" master:master
+          git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GH_REPO" master:master
           git push --force --quiet "https://sdokio:${{ secrets.GITEE_ACCESS_TOKEN }}@$GITEE_REPO" master:master
           git push --force --quiet "https://sdokio:${{ secrets.CODING_ACCESS_TOKEN }}@$CODING_REPO" master:master
