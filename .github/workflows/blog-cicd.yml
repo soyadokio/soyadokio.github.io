@@ -6,11 +6,6 @@ on:
   push:
     branches:
       - hexo-src  # 当且仅当 master 分支发生 push 事件时才会触发本 workflow
-    paths-ignore:  # 下列文件/目录的变更不触发 jobs
-      - '.github/workflows/**'
-      - '**.md'
-      - LICENSE
-      - .gitattributes
 
 env:
   TZ: Asia/Shanghai
@@ -51,10 +46,6 @@ jobs:
         env:
           # Github 仓库
           GH_REPO: github.com/SoyaDokio/soyadokio.github.io.git
-          # Gitee 仓库
-          GITEE_REPO: gitee.com/sdokio/sdokio.git
-          # Coding 仓库
-          CODING_REPO: e.coding.net/sdokio/blog/blog.git
         run: |
           cd ./public && git init && git add .
           git config user.name "SoyaDokio"
@@ -62,5 +53,3 @@ jobs:
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GH_REPO" master:master
-          git push --force --quiet "https://sdokio:${{ secrets.GITEE_ACCESS_TOKEN }}@$GITEE_REPO" master:master
-          git push --force --quiet "https://sdokio:${{ secrets.CODING_ACCESS_TOKEN }}@$CODING_REPO" master:master
