@@ -54,7 +54,7 @@ jobs:
           # Gitee 仓库
           GITEE_REPO: gitee.com/sdokio/sdokio.git
           # Coding 仓库
-          CODING_REPO: e.coding.net/sdokio/personal/blog.git
+          CODING_REPO: e.coding.net/sdokio/blog/blog.git
         run: |
           cd ./public && git init && git add .
           git config user.name "SoyaDokio"
