@@ -3,17 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: SoyaDokio
+subtitle: '个人博客'
+description: 'personal blog'
+keywords: blog
+author: SoyaDokio
+language:
+  - zh-CN
+  - zh-TW
+  - en
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://soyadokio.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -34,23 +37,28 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
+auto_spacing: false # 在中文和英文之间加入空格
 titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
-filename_case: 0
+external_link: # 在新标签中打开链接
+  enable: true # 是否启用
+  field: post # 对整个网站(site)生效或仅对文章(post)生效
+  exclude: '' # 需要排除的域名。主域名和子域名如 www 需分别配置
+filename_case: 0 # 把文件名称转换成小写(1)或大写(2)，也可以保持原样(0)
 render_drafts: false
-post_asset_folder: false
+# 当资源文件管理功能打开(post_asset_folder: true)后，Hexo将会在你每一次通过 hexo new [layout] <title> 命令
+# 创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这
+# 个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。
+# 引用示例：{% asset_img example.jpg 'This is an example image' %}
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
+  line_number: true # 显示行号。Enabling this option will also enable wrap option
+  auto_detect: false # 如果未指定语言，则启用自动检测
+  tab_replace: '' # 用 n 个空格替换 tabs；如果值为空，则不会替换 tabs
   wrap: true
-  hljs: false
+  hljs: false # Use the hljs-* prefix for CSS classes
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -77,7 +85,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+use_date_for_updated: true # 启用以后，如果 Front Matter 中没有指定 updated， post.updated 将会使用 date 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -93,12 +101,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# theme: landscape
-theme: maupassant
+theme: maupassant # 当前主题名称。值为false时禁用主题
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repository: 'https://github.com/SoyaDokio/soyadokio.github.io.git'
+  repo: 'https://github.com/SoyaDokio/soyadokio.github.io.git'
   branch: master
+  message: 'Hexo deployer updated: {{ now("YYYY-MM-DD HH:mm:ss") }}'
