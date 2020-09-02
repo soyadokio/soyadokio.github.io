@@ -103,6 +103,15 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: maupassant # 当前主题名称。值为false时禁用主题
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 10
+  hub:
+  content:
+  content_limit:
+  content_limit_delim: ' '
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
