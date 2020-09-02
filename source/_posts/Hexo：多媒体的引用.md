@@ -1,9 +1,9 @@
 ---
 title: Hexo：多媒体的引用
 date: 2020-08-21 18:26:58
-updated: 2020-09-01 17:21:00
+updated: 2020-09-02 13:50:00
 categories:
-  - Hexo
+  - 博客
 tags:
   - Hexo
 toc: true
