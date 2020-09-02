@@ -100,14 +100,6 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
 links:
   - title: Edith:在线文本编辑器
     url: http://notepad.sdokio.cn/
-  - title: 百度
-    url: https://www.baidu.com/
-  - title: 谷歌
-    url: https://www.google.com/
-  - title: hexo+github 搭建博客记录
-    url: https://silaoa.github.io/2019/2019-04-18-hexo-github-pages建博客站全过程记录.html
-  - title: 使用 GitHub Actions 自动部署 Hexo 博客到 GitHub Pages
-    url: https://juejin.im/post/6854573218779381773
 
 timeline:
   - num: 1
