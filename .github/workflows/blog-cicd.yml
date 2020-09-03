@@ -58,6 +58,7 @@ jobs:
   # job 2
   create-release:
     name: create release for CDN of jsDelivr
+    needs: blog-cicd
     runs-on: ubuntu-latest
 
     steps:
