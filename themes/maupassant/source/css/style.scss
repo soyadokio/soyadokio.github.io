@@ -1873,3 +1873,8 @@ em.search-keyword {
     background-color: #999999;
     text-shadow: 0
 }
+
+/* hidden "powered by valine" and valine version */
+#vcomment .txt-right {
+    display: none;
+}
