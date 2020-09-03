@@ -54,25 +54,3 @@ jobs:
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GH_REPO" master:master
-
-  # job 2
-  create-release:
-    name: create release for CDN of jsDelivr
-    needs: blog-cicd
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 01.Checkout codes
-        uses: actions/checkout@v2
-
-      - name: 02.Create release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: 'auto release for CDN of jsDelivr'
-          draft: false
-          prerelease: false
