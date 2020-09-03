@@ -65,14 +65,7 @@ jobs:
       - name: 01.Checkout codes
         uses: actions/checkout@v2
 
-      - name: 02.Generate changelog
-        id: changelog
-        uses: metcalfc/changelog-generator@v0.4.1
-        with:
-          myToken: ${{ secrets.GITHUB_TOKEN }}
-          head-ref: 'master'
-
-      - name: 03.Create release
+      - name: 02.Create release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -80,6 +73,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: ${{ steps.changelog.outputs.changelog }}
+          body: 'auto release for CDN of jsDelivr'
           draft: false
           prerelease: false
