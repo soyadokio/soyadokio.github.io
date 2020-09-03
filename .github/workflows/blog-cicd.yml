@@ -70,6 +70,7 @@ jobs:
         uses: metcalfc/changelog-generator@v0.4.1
         with:
           myToken: ${{ secrets.GITHUB_TOKEN }}
+          head-ref: 'master'
 
       - name: 03.Create release
         id: create_release
