@@ -16,6 +16,6 @@ comments: false
 
 ## 关于博客
 
-* 2016 年 使用 Hugo 搭建博客，托管于个人 VPS
-* 2019 年 02 月 VPS 服务商不提供续费，未备份博客丢失
-* 2020 年 08 月 使用 Hexo 搭建博客，托管于 GithubPages
+* **2016年**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用 Hugo 搭建博客，托管于个人 VPS
+* **2019年02月**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VPS 服务商不提供续费，未备份博客丢失
+* **2020年08月**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用 Hexo 搭建博客，托管于 GithubPages
