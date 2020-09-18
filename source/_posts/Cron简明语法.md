@@ -19,8 +19,8 @@ description: cron 表达式用于定义定时任务的执行策略。本文目�
 ## 语法规则
 `cron 表达式`是一个字符串，该字符串分为**7**个**`域`**，相邻的两个域由一个`space`隔开。最后一个`域`（年）**可省略**，实际应用中多为前 6 个`域`。
 ```
-[秒] [分] [时] [日] [月] [周] [年]
-[Seconds] [Minutes] [Hours] [DayofMonth] [Month] [DayofWeek] [Year]
+{秒} {分} {时} {日} {月} {周} {年}
+{Seconds} {Minutes} {Hours} {DayofMonth} {Month} {DayofWeek} {Year}
 ```
 <font color=#aaaaaa size=2>注意：当「周」域为「*」时，容易错误理解为每周，但周是时间段而不是时间点，显然理解有误。实际上应理解作当前周的每一天，即「每天」。其实结合其英文原文「DayofWeek」还是很好理解的。这里我找不到更合适和贴切的翻译，就仍译作「周」。</font>
 
