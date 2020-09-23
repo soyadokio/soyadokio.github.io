@@ -7,8 +7,10 @@ comments: false
 
 ## 关于我
 
-* 坐标武汉，会一点 Java, Python
-* 喜欢爬山，摄影
+* 现在武汉
+* 会一点 Java, Python
+* 喜欢孤独
+* 迷惑を掛けない
 * 单机游戏爱好者
 
 
