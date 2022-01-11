@@ -24,7 +24,7 @@
 
 4. clone 项目
 
-    `git clone -b hexo-src https://github.com/SoyaDokio/soyadokio.github.io.git`
+    `git clone -b hexo-src https://github.com/sdokio/sdokio.github.io.git`
 
 5. npm安装依赖环境
 
