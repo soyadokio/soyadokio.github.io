@@ -46,10 +46,10 @@ jobs:
       - name: 06.Deploy blog  # 部署博客
         env:
           # Github 仓库
-          GH_REPO: github.com/SoyaDokio/soyadokio.github.io.git
+          GH_REPO: github.com/sdokio/sdokio.github.io.git
         run: |
           cd ./public && git init && git add .
-          git config user.name "SoyaDokio"
+          git config user.name "sdokio"
           git config user.email "zdqdj@qq.com"
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
