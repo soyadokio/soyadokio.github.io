@@ -16,7 +16,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.sdokio.cn
+url: http://ghblog.sdokio.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -116,6 +116,6 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repo: 'https://github.com/SoyaDokio/soyadokio.github.io.git'
+  repo: 'https://github.com/sdokio/sdokio.github.io.git'
   branch: master
   message: 'Hexo deployer updated: {{ now("YYYY-MM-DD HH:mm:ss") }}'
