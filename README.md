@@ -1,4 +1,4 @@
-# soyadokio.github.io
+# sdokio.github.io
 
 ### 说明
 本分支为hexo博客框架源码，用于生成静态博客html。

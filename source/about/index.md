@@ -15,7 +15,7 @@ comments: false
 
 
 * E-mail：[zdqdj@qq.com](mailto://zdqdj@qq.com)
-* Github：[SoyaDokio](https://github.com/SoyaDokio)
+* Github：[SoyaDokio](https://github.com/sdokio)
 
 ## 关于博客
 
