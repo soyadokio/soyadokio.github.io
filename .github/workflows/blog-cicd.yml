@@ -1,6 +1,8 @@
 # 参照1：https://xirikm.net/2020/313-1
 # 参照2：https://juejin.im/post/6854573218779381773
-# 2022/1/13更新：参照https://github.com/marketplace/actions/hexo-action#example-workflow---hexo-deploy
+# 2022/1/13更新：
+#   - https://github.com/marketplace/actions/hexo-action#example-workflow---hexo-deploy
+#   - https://mark0.pw/2021/02/17/Hexo博客使用Github-Actions发布排故记录/
 
 # 名称：自动发布 GitHub Pages
 # 解释：每次 push 源码到 hexo-src 分支后，自动部署 build/deploy 到 master 分支
@@ -21,20 +23,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码
-      - name: 01.Checkout 检出代码
+      # Checkout
+      - name: 01.检出代码
         uses: actions/checkout@v2
         with:
           submodules: true # 检出私有的submodules（如themes等）
 
-      # 配置 Node.js 环境
-      - name: 02.Setup Node.js environment
+      # Setup Node.js environment
+      - name: 02.配置 Node.js 环境
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '14.18.2'
 
-      # 缓存依赖以加速构建（Github会移除超7天未访问的缓存）
-      - name: 03.Cache node modules
+      # Cache node modules
+      - name: 03.缓存依赖以加速构建（Github会移除超7天未访问的缓存）
         uses: actions/cache@v1
         id: cache
         with:
@@ -43,25 +45,26 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      # 安装依赖
-      - name: 04.Install dependencies
+      # Install dependencies
+      - name: 04.安装依赖
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      # 安装运行环境
-      - name: 05.Install execute environment
+      # Install execute environment
+      - name: 05.安装运行环境
         run: |
           npm install hexo-cli -g
           npm install hexo-deployer-git --save
 
-      # 编译 Markdown 文件
-      - name: 06.Generate files
+      # Generate files
+      - name: 06.编译 Markdown 文件
         run: |
           hexo clean
           hexo generate
 
-      # 部署
-      - name: 07.Deploy
+      # Push
+      - name: 07.推送
+        id: deploy
         env: # 定义环境变量
           GH_REPO: github.com/sdokio/sdokio.github.io.git
         run: |
@@ -72,7 +75,7 @@ jobs:
           git commit -m "GitHub-Actions: Auto build at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GH_REPO" master:master
 
-      # 部署之后获取输出
-      - name: 08.Get the output
+      # Get the output
+      - name: 08.获取推送的输出信息
         run: |
           echo "${{ steps.deploy.outputs.notify }}"
