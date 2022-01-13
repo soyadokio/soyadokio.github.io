@@ -1,56 +1,78 @@
 # 参照1：https://xirikm.net/2020/313-1
 # 参照2：https://juejin.im/post/6854573218779381773
-name: Blog CI/CD  # 部署 Blog 到 GitHub Pages
+# 2022/1/13更新：参照https://github.com/marketplace/actions/hexo-action#example-workflow---hexo-deploy
+
+# 名称：自动发布 GitHub Pages
+# 解释：每次 push 源码到 hexo-src 分支后，自动部署 build/deploy 到 master 分支
+name: Hexo CI/CD Action for automating deployment
 
 on:
   push:
     branches:
-      - hexo-src  # 当且仅当 master 分支发生 push 事件时才会触发本 workflow
+      - hexo-src  # 当 hexo-src 分支发生 push 事件时触发
 
 env:
   TZ: Asia/Shanghai
 
 jobs:
   # job 1
-  blog-cicd:
-    name: Hexo blog build & deploy  # 每次 commit 后自动部署 Blog 到 GitHub Pages
+  build:
+    name: A job to deploy blog.
     runs-on: ubuntu-latest
 
     steps:
-      - name: 01.Checkout codes  # 检出代码
+      # 检出代码
+      - name: 01.Checkout 检出代码
         uses: actions/checkout@v2
+        with:
+          submodules: true # 检出私有的submodules（如themes等）
 
-      - name: 02.Setup node  # 配置 node 环境
-        uses: actions/setup-node@v1
+      # 配置 Node.js 环境
+      - name: 02.Setup Node.js environment
+        uses: actions/setup-node@v2
         with:
           node-version: '12.x'
 
-      - name: 03.Cache node modules  # 设置 modules 缓存目录以免每次 workflow 都要重新下载，从而加快构建速度
+      # 缓存依赖以加速构建（Github会移除超7天未访问的缓存）
+      - name: 03.Cache node modules
         uses: actions/cache@v1
+        id: cache
         with:
-          path: ~/.npm
+          path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}  # 使用 package-lock.json 文件的 hash 值来标识缓存是否需要更新
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-      #- name: Set time zone  # 设置时区
+      # 安装依赖
+      - name: 04.Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
 
-      - name: 04.Install dependencies  # 安装依赖
+      # 安装运行环境
+      - name: 05.Install execute environment
         run: |
-          npm install -g hexo-cli
-          npm install
+          npm install hexo-cli -g
+          npm install hexo-deployer-git --save
 
-      - name: 05.Generate files  # 编译 markdown 文件
+      # 编译 Markdown 文件
+      - name: 06.Generate files
         run: |
           hexo clean
           hexo generate
 
-      - name: 06.Deploy blog  # 部署博客
-        env:
-          # Github 仓库
+      # 部署
+      - name: 07.Deploy
+        env: # 定义环境变量
           GH_REPO: github.com/sdokio/sdokio.github.io.git
         run: |
           cd ./public && git init && git add .
           git config user.name "sdokio"
           git config user.email "zdqdj@qq.com"
           git add .
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "GitHub-Actions: Auto build at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://${{ secrets.GH_ACCESS_TOKEN }}@$GH_REPO" master:master
+
+      # 部署之后获取输出
+      - name: 08.Get the output
+        run: |
+          echo "${{ steps.deploy.outputs.notify }}"
