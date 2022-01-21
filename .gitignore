@@ -6,3 +6,5 @@ db.json
 node_modules/
 .deploy*/
 .github/
+package-lock.json
+package.json
