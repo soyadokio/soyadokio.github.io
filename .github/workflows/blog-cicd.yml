@@ -6,7 +6,7 @@
 
 # 名称：自动发布 GitHub Pages
 # 解释：每次 push 源码到 hexo-src 分支后，自动部署 build/deploy 到 master 分支
-name: Hexo CI/CD Action for automating deployment
+name: Hexo的持续集成和持续部署
 
 on:
   push:
@@ -19,8 +19,8 @@ env:
 jobs:
   # job 1
   build:
-    name: A job to deploy blog.
-    runs-on: ubuntu-latest
+    name: job1:Hexo的持续集成和持续部署
+    runs-on: ubuntu-20.04
 
     steps:
       # Checkout
