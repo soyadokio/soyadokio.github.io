@@ -52,29 +52,29 @@ Windows平台，Sublime关联常见文本格式后，所有被关联格式的文
 
 1. 下载程序 [Default Programs Editor](https://defaultprogramseditor.com/files/DefaultProgramsEditor.zip) 后运行
 
-1. 点击「File Type Settings」
+2. 点击「File Type Settings」
 
 ![▲ 点击「File Type Settings」](DefaultProgramsEditor-1.png)
 
-1. 点击「Icon」
+3. 点击「Icon」
 
 ![▲ 点击「Icon」](DefaultProgramsEditor-2.png)
 
-1. 借助右上角的检索框在下方的文件类型清单中找到对应的文件类型，单击选中
+4. 借助右上角的检索框在下方的文件类型清单中找到对应的文件类型，单击选中
 
 ![▲ 找到目标文件类型](DefaultProgramsEditor-3.png)
 
-1. 点击「Next」按钮
+5. 点击「Next」按钮
 
-1. 单击「Browse...」按钮，然后选中喜欢的图标，点击确定
+6. 单击「Browse...」按钮，然后选中喜欢的图标，点击确定
 
 ![▲ 单击「Browse...」按钮](DefaultProgramsEditor-4.png)
 
 ![▲ 选择喜欢的图标](DefaultProgramsEditor-5.png)
 
-1. 点击右下角按钮「Save Icon」即可应用
+7. 点击右下角按钮「Save Icon」即可应用
 
-1. [可选]或者也可点击'Save Icon'按钮旁的下拉三角形图标，选中「Save to .reg file...」按钮，再选择保存目录，即可得到后缀为.reg的文件，方便传给别的电脑使用，使用时只许双击运行再点确定即可。
+8. [可选]或者也可点击'Save Icon'按钮旁的下拉三角形图标，选中「Save to .reg file...」按钮，再选择保存目录，即可得到后缀为.reg的文件，方便传给别的电脑使用，使用时只许双击运行再点确定即可。
 我看了下保存的.reg文件是这样的：
 ```
 Windows Registry Editor Version 5.00
