@@ -1,4 +1,19 @@
-# 梅林系统DNS自定义设置方法
+---
+title: 梅林系统DNS自定义设置方法
+toc: true
+comments: true
+date: 2023-02-05 20:29:20
+updated: 2023-02-05 20:29:20
+categories:
+  - 博客
+tags:
+  - DNS
+description:
+---
+
+输入域名`lyq.com`替代输入IP`192.168.1.1`，以便记忆。
+
+<!-- more -->
 
 ## 用途
 
@@ -61,3 +76,7 @@
     ```shell
     service restart_dnsmasq
     ```
+
+## 参考内容
+
+[1]K3梅林开启自定义DNS功能[EB/OL].[https://www.bilibili.com/video/av668028851](https://www.bilibili.com/video/av668028851)
