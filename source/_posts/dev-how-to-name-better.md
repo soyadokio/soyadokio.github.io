@@ -61,7 +61,7 @@ python 语言建议使用下划线命名法。不同于变量命名的是，函�
 
 常用动词表：
 |类别|单词|
-|:-|:-|
+|:---|:---|
 |添加/插入/创建/初始化/加载 |add、append、insert、create、initialize、load|
 |删除/销毁 |delete、remove、destroy、drop|
 |打开/开始/启动 |open、start|
@@ -88,7 +88,7 @@ python 语言建议使用下划线命名法。不同于变量命名的是，函�
 
 常用名词表：
 |类别|单词|
-|:-|:-|
+|:---|:---|
 |容量/大小/长度 |capacity、size、length|
 |实例/上下文 |instance、context|
 |配置 |config、settings|
