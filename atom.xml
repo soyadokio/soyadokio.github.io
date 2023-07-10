@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SoyaDokio的博客</title>
+  
+  <subtitle>♥ Do have faith in what you&#39;re doing.</subtitle>
+  <link href="http://ghblog.sdokio.cn/atom.xml" rel="self"/>
+  
+  <link href="http://ghblog.sdokio.cn/"/>
+  <updated>2023-07-04T07:27:35.000Z</updated>
+  <id>http://ghblog.sdokio.cn/</id>
+  
+  <author>
+    <name>SoyaDokio</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>怎样给文件、变量和函数命名？</title>
+    <link href="http://ghblog.sdokio.cn/2023/07/04/dev-how-to-name-better/"/>
+    <id>http://ghblog.sdokio.cn/2023/07/04/dev-how-to-name-better/</id>
+    <published>2023-07-04T07:27:35.000Z</published>
+    <updated>2023-07-04T07:27:35.000Z</updated>
+    
+    
+    <summary type="html">给文件、函数、变量命名是一件很难的事，本文是一个归纳总结。</summary>
+    
+    
+    
+    <category term="编程" scheme="http://ghblog.sdokio.cn/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ghblog.sdokio.cn/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="命名" scheme="http://ghblog.sdokio.cn/tags/%E5%91%BD%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VBA 中 Empty、Null、Nothing 的区别</title>
+    <link href="http://ghblog.sdokio.cn/2023/02/08/VBA-Empty%E3%80%81Nothing%E3%80%81Null%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://ghblog.sdokio.cn/2023/02/08/VBA-Empty%E3%80%81Nothing%E3%80%81Null%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2023-02-08T08:19:59.000Z</published>
+    <updated>2023-02-08T08:19:59.000Z</updated>
+    
+    
+    <summary type="html">对 VBA 中常见的几种“空”类型理解的归纳整理。</summary>
+    
+    
+    
+    <category term="编程" scheme="http://ghblog.sdokio.cn/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="VBA" scheme="http://ghblog.sdokio.cn/tags/VBA/"/>
+    
+    <category term="语法" scheme="http://ghblog.sdokio.cn/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VBA- 数据类型</title>
+    <link href="http://ghblog.sdokio.cn/2023/02/08/VBA-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://ghblog.sdokio.cn/2023/02/08/VBA-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2023-02-08T06:34:53.000Z</published>
+    <updated>2023-02-08T06:34:53.000Z</updated>
+    
+    
+    <summary type="html">对 VBA 语言数据类型的归纳整理。</summary>
+    
+    
+    
+    <category term="编程" scheme="http://ghblog.sdokio.cn/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="VBA" scheme="http://ghblog.sdokio.cn/tags/VBA/"/>
+    
+    <category term="语法" scheme="http://ghblog.sdokio.cn/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>梅林系统 DNS 自定义设置方法</title>
+    <link href="http://ghblog.sdokio.cn/2023/02/05/%E6%A2%85%E6%9E%97%E7%B3%BB%E7%BB%9FDNS%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
+    <id>http://ghblog.sdokio.cn/2023/02/05/%E6%A2%85%E6%9E%97%E7%B3%BB%E7%BB%9FDNS%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/</id>
+    <published>2023-02-05T12:29:20.000Z</published>
+    <updated>2023-02-05T12:29:20.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;输入域名&lt;code&gt;lyq.com&lt;/code&gt;替代输入IP&lt;code&gt;192.168.1.1&lt;/code&gt;，以便记忆。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="博客" scheme="http://ghblog.sdokio.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="DNS" scheme="http://ghblog.sdokio.cn/tags/DNS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime 关联常见文本格式后难以通过图标分辨文件类型的应对</title>
+    <link href="http://ghblog.sdokio.cn/2022/04/12/Sublime%E5%85%B3%E8%81%94%E5%90%8E%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87%E5%9B%BE%E6%A0%87%E5%88%86%E8%BE%A8%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BA%94%E5%AF%B9/"/>
+    <id>http://ghblog.sdokio.cn/2022/04/12/Sublime%E5%85%B3%E8%81%94%E5%90%8E%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87%E5%9B%BE%E6%A0%87%E5%88%86%E8%BE%A8%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BA%94%E5%AF%B9/</id>
+    <published>2022-04-12T03:13:18.000Z</published>
+    <updated>2022-04-12T03:13:18.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Windows平台，Sublime关联常见文本格式后，所有被关联格式的文件图标都变成了Sublime的Logo，导致难以通过图标分辨文件类型，这背离了文件图标分辨文件的初衷。那么如何使文件既可以用Sublime打开，又有清晰明了易于分辨的图标呢？今天终于决定腾出时间来应对这个问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="记录" scheme="http://ghblog.sdokio.cn/categories/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="Sublime" scheme="http://ghblog.sdokio.cn/tags/Sublime/"/>
+    
+    <category term="文件格式" scheme="http://ghblog.sdokio.cn/tags/%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/"/>
+    
+    <category term="文件类型" scheme="http://ghblog.sdokio.cn/tags/%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>窗口移出屏幕后的应对</title>
+    <link href="http://ghblog.sdokio.cn/2022/02/17/%E7%AA%97%E5%8F%A3%E7%A7%BB%E5%87%BA%E5%B1%8F%E5%B9%95%E5%90%8E%E7%9A%84%E5%BA%94%E5%AF%B9%E6%96%B9%E5%BC%8F/"/>
+    <id>http://ghblog.sdokio.cn/2022/02/17/%E7%AA%97%E5%8F%A3%E7%A7%BB%E5%87%BA%E5%B1%8F%E5%B9%95%E5%90%8E%E7%9A%84%E5%BA%94%E5%AF%B9%E6%96%B9%E5%BC%8F/</id>
+    <published>2022-02-17T01:45:58.000Z</published>
+    <updated>2022-02-17T01:45:58.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天开会外接了会议室的电视作为显示器，待回到工位接上自己的显示器时发现Chrome的窗口能通过任务栏图标选取/激活，但窗口部分无法出来。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="http://ghblog.sdokio.cn/categories/Windows/"/>
+    
+    
+    <category term="Windows" scheme="http://ghblog.sdokio.cn/tags/Windows/"/>
+    
+    <category term="Tips" scheme="http://ghblog.sdokio.cn/tags/Tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>合并 B 站下载的单独视频和单独音频</title>
+    <link href="http://ghblog.sdokio.cn/2022/02/07/%E5%90%88%E5%B9%B6B%E7%AB%99%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8D%95%E7%8B%AC%E8%A7%86%E9%A2%91%E5%92%8C%E5%8D%95%E7%8B%AC%E9%9F%B3%E9%A2%91/"/>
+    <id>http://ghblog.sdokio.cn/2022/02/07/%E5%90%88%E5%B9%B6B%E7%AB%99%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8D%95%E7%8B%AC%E8%A7%86%E9%A2%91%E5%92%8C%E5%8D%95%E7%8B%AC%E9%9F%B3%E9%A2%91/</id>
+    <published>2022-02-07T14:44:58.000Z</published>
+    <updated>2022-02-07T14:44:58.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;好像从2020年开始，用IDM从B站下载视频时会出现只能分别下载独立视频和独立音频的问题，那么就需要下载后手动合并了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="记录" scheme="http://ghblog.sdokio.cn/categories/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="ffmpeg" scheme="http://ghblog.sdokio.cn/tags/ffmpeg/"/>
+    
+    <category term="Bilibili" scheme="http://ghblog.sdokio.cn/tags/Bilibili/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 后台运行程序</title>
+    <link href="http://ghblog.sdokio.cn/2022/01/28/Linux%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://ghblog.sdokio.cn/2022/01/28/Linux%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</id>
+    <published>2022-01-28T15:46:45.000Z</published>
+    <updated>2022-01-28T15:46:45.000Z</updated>
+    
+    
+    <summary type="html">有时候正在运行某个程序，突然要去做另一件事，程序又不想中断，怎么办？</summary>
+    
+    
+    
+    <category term="Linux学习" scheme="http://ghblog.sdokio.cn/categories/Linux%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Linux" scheme="http://ghblog.sdokio.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中烟新商盟小工具</title>
+    <link href="http://ghblog.sdokio.cn/2022/01/18/%E4%B8%AD%E7%83%9F%E6%96%B0%E5%95%86%E7%9B%9F%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    <id>http://ghblog.sdokio.cn/2022/01/18/%E4%B8%AD%E7%83%9F%E6%96%B0%E5%95%86%E7%9B%9F%E5%B0%8F%E5%B7%A5%E5%85%B7/</id>
+    <published>2022-01-18T08:03:11.000Z</published>
+    <updated>2022-01-18T08:03:11.000Z</updated>
+    
+    
+    <summary type="html">经理要求必须删除订购量为0的行，手动太麻烦。</summary>
+    
+    
+    
+    <category term="技术" scheme="http://ghblog.sdokio.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="工具" scheme="http://ghblog.sdokio.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TF 闪存卡速度参速率参数说明</title>
+    <link href="http://ghblog.sdokio.cn/2021/01/27/TF%E9%97%AA%E5%AD%98%E5%8D%A1%E9%80%9F%E5%BA%A6%E5%8F%82%E9%80%9F%E7%8E%87%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/"/>
+    <id>http://ghblog.sdokio.cn/2021/01/27/TF%E9%97%AA%E5%AD%98%E5%8D%A1%E9%80%9F%E5%BA%A6%E5%8F%82%E9%80%9F%E7%8E%87%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/</id>
+    <published>2021-01-27T06:00:06.000Z</published>
+    <updated>2021-01-27T06:00:06.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;关于TF卡最低写入速率的4种规范/标准的说明。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>

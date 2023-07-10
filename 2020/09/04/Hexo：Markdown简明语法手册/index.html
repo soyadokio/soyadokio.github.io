@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;zh-TW&quot;,&quot;en&quot;,&quot;default&quot;]"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="SoyaDokio's personal blog"><title>Hexo：Markdown 简明语法手册 | SoyaDokio的博客</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hexo：Markdown 简明语法手册</h1><a id="logo" href="/.">SoyaDokio的博客</a><p class="description">♥ Do have faith in what you're doing.</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Hexo：Markdown 简明语法手册</h1><div class="post-meta">2020-09-04<span> | </span><span class="category"><a href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 3.8k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 15</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/2020/09/04/Hexo%EF%BC%9AMarkdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C/#vcomment"><span class="valine-comment-count" data-xid="/2020/09/04/Hexo%EF%BC%9AMarkdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#分级标题"><span class="toc-number">1.</span> <span class="toc-text">分级标题 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层级列表"><span class="toc-number">2.</span> <span class="toc-text">层级列表 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#斜体 - 粗体 - 删除线 - 高亮"><span class="toc-number">3.</span> <span class="toc-text">斜体 &#x2F; 粗体 &#x2F; 删除线 &#x2F; 高亮 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-number">4.</span> <span class="toc-text">引用 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">5.</span> <span class="toc-text">列表 </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无序列表"><span class="toc-number">5.1.</span> <span class="toc-text"> 无序列表 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有序列表"><span class="toc-number">5.2.</span> <span class="toc-text">有序列表 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任务列表"><span class="toc-number">5.3.</span> <span class="toc-text">任务列表 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片 - 音频 - 视频"><span class="toc-number">6.</span> <span class="toc-text">图片 &#x2F; 音频 &#x2F; 视频 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超链接"><span class="toc-number">7.</span> <span class="toc-text">超链接 </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内式"><span class="toc-number">7.1.</span> <span class="toc-text"> 行内式 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动连接"><span class="toc-number">7.2.</span> <span class="toc-text">自动连接 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#锚点"><span class="toc-number">8.</span> <span class="toc-text">锚点 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格"><span class="toc-number">9.</span> <span class="toc-text">表格 </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#符号写法"><span class="toc-number">9.1.</span> <span class="toc-text"> 符号写法 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML 写法"><span class="toc-number">9.2.</span> <span class="toc-text">HTML 写法 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释"><span class="toc-number">10.</span> <span class="toc-text">注释 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">11.</span> <span class="toc-text">分割线 </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码块"><span class="toc-number">12.</span> <span class="toc-text">代码块 </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内代码块"><span class="toc-number">12.1.</span> <span class="toc-text"> 行内代码块 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行代码块"><span class="toc-number">12.2.</span> <span class="toc-text">多行代码块 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊转义字符"><span class="toc-number">13.</span> <span class="toc-text">特殊转义字符 </span></a></li></ol></div></div><div class="post-content"><p>Markdown 语法简明便捷，既弥补了传统纯文本缺少样式的不足，又降低了传统 Word、HTML 等样式文本的技术门槛，自 2004 年被 John Gruber 创造以来，得到一定范围的传播和使用。2012 年 Github 强势崛起，并官方推荐 Markdown 格式，这几年得以广泛传播，甚至衍生出了林林总总数十种版本 / 变体。不过，今天我只谈 Hexo 相关内容，Hexo 默认自带的 Markdown 渲染器为<code>hexo-renderer-marked</code>，本文就是对其支持语法的一个总结。</p>
+<p>由于暂时用不上数学公式，本文 <strong> 不包含 </strong><code>LaTeX 公式</code> 相关语法。</p>
+<h2 id="分级标题"><a href="# 分级标题" class="headerlink" title="分级标题"></a>分级标题 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># &#123; 一级标题 &#125;</span><br><span class="line">## &#123; 二级标题 &#125;</span><br><span class="line">### &#123; 三级标题 &#125;</span><br><span class="line">#### &#123; 四级标题 &#125;</span><br><span class="line">##### &#123; 五级标题 &#125;</span><br><span class="line">###### &#123; 六级标题 &#125;</span><br></pre></td></tr></table></figure>
+<p>以 <code>#</code> 开头，以标题内容结尾，中间填充至少一个<code>Space</code>。标题共有 6 级。一级标题和二级标题也可以使用如下语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; 一级标题 &#125;</span><br><span class="line">&#x3D;&#x3D;&#x3D;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; 二级标题 &#125;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 中华人民共和国</span><br><span class="line">## 湖北省</span><br><span class="line">### 武汉市</span><br><span class="line">#### 武昌区</span><br><span class="line">##### 徐东街道</span><br><span class="line">###### 群星城社区</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="001_fenjibiaoti_001.png" alt="▲ 分级标题 示例截图"></p>
+<h2 id="层级列表"><a href="# 层级列表" class="headerlink" title="层级列表"></a>层级列表 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* &#123; 一级目录名称 &#125;</span><br><span class="line">  * &#123; 二级目录名称 &#125;</span><br><span class="line">    * &#123; 三级目录名称 &#125;</span><br><span class="line">      * &#123; 四级目录名称 &#125;</span><br><span class="line">        * &#123; 五级目录名称 &#125;</span><br><span class="line">          ...</span><br></pre></td></tr></table></figure>
+<p>层级列表每下一级的缩进都要比上一级多 2 个 <code>Space</code> 或 1 个<code>Tab</code>，且第一级前面不可超过 3 个空格。层级列表一般仅用一、二、三级列表，第一级的标识为实心圆点，第二级的标识为空心圆点，第三级的标识为实心方点。不过理论上可以有无数层级，但从第三级开始层级标识均为实心方点。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 文档</span><br><span class="line">  * 什么是 Hexo</span><br><span class="line">  * 安装</span><br><span class="line">    * 安装前提</span><br><span class="line">      * 安装 Git</span><br><span class="line">        * Git 注意事项</span><br><span class="line">      * 安装 Node.js</span><br><span class="line">      * 安装 Hexo</span><br><span class="line">  * 使用</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="002_cengjiliebiao_001.png" alt="▲ 层级列表 示例截图"></p>
+<h2 id="斜体 - 粗体 - 删除线 - 高亮"><a href="# 斜体 - 粗体 - 删除线 - 高亮" class="headerlink" title="斜体 / 粗体 / 删除线 / 高亮"></a>斜体 / 粗体 / 删除线 / 高亮 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123; 斜体内容 &#125;*</span><br><span class="line">**&#123; 粗体内容 &#125;**</span><br><span class="line">~&#123; 删除内容 &#125;~</span><br><span class="line">&#96;&#123; 高亮内容 &#125;&#96;</span><br><span class="line">&lt;u&gt;&#123; 高亮内容 &#125;&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">他望车外看了看，说：*“我买几个橘子去。你就在此地，不要走动。”*</span><br><span class="line">他望车外看了看，说：**“我买几个橘子去。你就在此地，不要走动。”**</span><br><span class="line">他望车外看了看，说：~“我买几个橘子去。你就在此地，不要走动。”~</span><br><span class="line">他望车外看了看，说：&#96;“我买几个橘子去。你就在此地，不要走动。”&#96;</span><br><span class="line">他望车外看了看，说：&lt;u&gt;“我买几个橘子去。你就在此地，不要走动。”&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果 </strong><br><img src="003_xieticutishanchuxiangaoliang_001.png" alt="▲ 斜体 / 粗体 / 删除线 / 高亮 示例截图"><br><font color=#aaaaaa size=2> 按说斜体和粗斜体是两码事，后者需要嵌套，但这里兴许是我这套主题的缘故，斜体自动加粗了。</font></p>
+<h2 id="引用"><a href="# 引用" class="headerlink" title="引用"></a>引用 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; &#123; 引用内容 &#125;</span><br><span class="line">&gt;&gt; &#123; 嵌套引用内容 &#125;</span><br><span class="line">&gt;&gt;&gt; &#123; 再次嵌套引用内容 &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 他望车外看了看，说：“我买几个橘子去。你就在此地，不要走动。”</span><br><span class="line">&gt;&gt; 他望车外看了看，说：“我买几个橘子去。你就在此地，不要走动。”</span><br><span class="line">&gt;&gt;&gt; 他望车外看了看，说：“我买几个橘子去。你就在此地，不要走动。”</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="004_yinyong_001.png" alt="▲ 引用 示例截图"></p>
+<h2 id="列表"><a href="# 列表" class="headerlink" title="列表"></a>列表 </h2><h3 id="无序列表"><a href="# 无序列表" class="headerlink" title="无序列表"></a> 无序列表 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* &#123; 列表 1 内容 &#125;</span><br><span class="line">* &#123; 列表 2 内容 &#125;</span><br><span class="line">* &#123; 列表 3 内容 &#125;</span><br></pre></td></tr></table></figure>
+<p>以 <code>*</code> 或<code>+</code>或 <code>-</code> 开头，以列表内容结尾，中间填充至少一个<code>Space</code>。标识为实心圆点。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">BAT 指：</span><br><span class="line">* Baidu</span><br><span class="line">* Alibaba</span><br><span class="line">* Tencent</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="005_liebiao_001.png" alt="▲ 无序列表 示例截图"></p>
+<h3 id="有序列表"><a href="# 有序列表" class="headerlink" title="有序列表"></a>有序列表 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. &#123; 列表内容 1&#125;</span><br><span class="line">1. &#123; 列表内容 2&#125;</span><br><span class="line">1. &#123; 列表内容 3&#125;</span><br></pre></td></tr></table></figure>
+<p>全部使用 <code>1.</code>，会自增。也可使用<code>1.</code>、<code>2.</code>、<code>3.</code> 这样手动指定序号。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">洗手步骤：</span><br><span class="line">1. 用干净自来水（温水或冷水）润湿双手，关掉水龙头，涂抹肥皂。</span><br><span class="line">1. 将您的手和肥皂揉搓在一起，让它起泡沫。趁着肥皂起沫时揉搓手背、手指间和指甲下。</span><br><span class="line">1. 擦洗双手至少 20 秒。</span><br><span class="line">  * 需要定时吗？ 大概是将“生日快乐”歌从头到尾哼唱两遍的时间。</span><br><span class="line">  * 时间不足 20 秒可以吗？建议 20 秒以上。</span><br><span class="line">1. 顺着干净自来水洗净双手。</span><br><span class="line">1. 用干净毛巾擦干双手或直接风干。</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="005_liebiao_002.png" alt="▲ 有序列表 示例截图"></p>
+<h3 id="任务列表"><a href="# 任务列表" class="headerlink" title="任务列表"></a>任务列表 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><figcaption><span>注意：由于代码块内的中括号里的空格不知何因会被自动删除，这里用下划线表示空格。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [_] &#123;（未完成）任务名称 &#125;</span><br><span class="line">- [x] &#123;（已完成）任务名称 &#125;</span><br></pre></td></tr></table></figure>
+<p>任务框需要配合有序或无序列表使用，故列入列表章节。中括号 <code>[]</code> 表复选框。若表示 <strong> 未完成 </strong> 则<code>[</code>和 <code>]</code> 之间必须有且仅有一个 <code>Space</code>，若表示<strong> 完成 </strong> 则<code>[</code>和 <code>]</code> 之间输入一个字母 <code>x</code>。右中括号<code>]</code> 和<code>任务名称 </code> 之间至少有一个<code>Space</code>。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><figcaption><span>注意：由于代码块内的中括号里的空格不知何因会被自动删除，这里用下划线表示空格。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- [_] 跑步</span><br><span class="line">- [_] 骑车</span><br><span class="line">- [x] 吃饭</span><br><span class="line">- [_] 睡觉</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="005_liebiao_003.png" alt="▲ 任务列表 示例截图"></p>
+<h2 id="图片 - 音频 - 视频"><a href="# 图片 - 音频 - 视频" class="headerlink" title="图片 / 音频 / 视频"></a>图片 / 音频 / 视频 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![&#123; 链接文本 &#125;](&#123; 链接 &#125; &#123;title 内容 &#125;)</span><br></pre></td></tr></table></figure>
+<p>静态图、动态图、视频和音频都是一样的引用方式，只是音频没写样式很丑。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![](006_tupianyinpinshipin_001.png)</span><br><span class="line">![](006_tupianyinpinshipin_002.gif)</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="006_tupianyinpinshipin_001.png" alt="▲ 静态图 示例截图"><br><img src="006_tupianyinpinshipin_002.gif" alt="▲ 动态图 示例动图"></p>
+<h2 id="超链接"><a href="# 超链接" class="headerlink" title="超链接"></a>超链接 </h2><h3 id="行内式"><a href="# 行内式" class="headerlink" title="行内式"></a> 行内式 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123; 链接文本 &#125;](&#123; 链接 &#125; &#123;title 内容 &#125;)</span><br></pre></td></tr></table></figure>
+<p><code>[]</code>里为链接文字。<code>()</code>里前者为链接地址，后者为链接的 title 属性（链接的 title 属性：鼠标悬停在链接上时浮现的悬浮框的内容），后者非必须。链接地址和链接的 title 属性之间需至少有一个<code>Space</code>。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[百度](http:&#x2F;&#x2F;www.baidu.com)</span><br><span class="line">[百度](http:&#x2F;&#x2F;www.baidu.com &quot; 百度一下，你就知道 &quot;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="007_chaolianjie_001.gif" alt="▲ 超链接 示例动图"></p>
+<h3 id="自动连接"><a href="# 自动连接" class="headerlink" title="自动连接"></a>自动连接 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;&#123; 链接或 Email&#125;&gt;</span><br></pre></td></tr></table></figure>
+<p>直接在 <code>&lt;&gt;</code> 之间输入链接或 Email。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http:&#x2F;&#x2F;www.baidu.com&#x2F;&gt;</span><br><span class="line">&lt;admin@baidu.com&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="007_chaolianjie_002.png" alt="▲ 超链接 示例截图"></p>
+<h2 id="锚点"><a href="# 锚点" class="headerlink" title="锚点"></a>锚点 </h2><p> 网页中，锚点其实就是 <strong> 页内超链接 </strong>，也就是链接本文档内部的某些元素，实现当前页面中的跳转。比如我在本节的标题写下一个锚点，在目录中写下对应链接，点击链接就能跳过来。<br><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&#123; 链接文字 &#125;](#&#123;index&#125;)</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;&#123;index&#125;&quot;&gt;&#123; 标题 &#125;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>跟超链接同理，只是链接地址改为锚点元素的 <code>id</code> 属性值。标题可省。<br><font color=#aaaaaa size=2>注意：<code>div</code>只是这里演示，任何 HTML 元素均可。</font></p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[第一句](#41)，[第二句](#42)，[第三句](#43)</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;41&quot;&gt;&lt;&#x2F;div&gt; 轻轻的我走了， 正如我轻轻的来； 我轻轻的招手， 作别西天的云彩。</span><br><span class="line">&lt;div id&#x3D;&quot;42&quot;&gt;&lt;&#x2F;div&gt; 正如我轻轻的来； 我轻轻的招手， 作别西天的云彩。</span><br><span class="line">&lt;div id&#x3D;&quot;43&quot;&gt;&lt;&#x2F;div&gt; 我轻轻的招手， 作别西天的云彩。</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="008_maodian_001.gif" alt="▲ 锚点 示例动图"></p>
+<h2 id="表格"><a href="# 表格" class="headerlink" title="表格"></a>表格 </h2><h3 id="符号写法"><a href="# 符号写法" class="headerlink" title="符号写法"></a> 符号写法 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|&#123; 表头 1&#125;|&#123; 表头 2&#125;|&#123; 表头 3&#125;|</span><br><span class="line">|-|-|-|</span><br><span class="line">|&#123; 内容 1-1&#125;|&#123; 内容 1-2&#125;|&#123; 内容 1-3&#125;|</span><br><span class="line">|&#123; 内容 2-1&#125;|&#123; 内容 2-2&#125;|&#123; 内容 2-3&#125;|</span><br><span class="line">|&#123; 内容 3-1&#125;|&#123; 内容 3-2&#125;|&#123; 内容 3-3&#125;|</span><br></pre></td></tr></table></figure>
+<p><code>|</code>控制分列，<code>-</code>控制分行，<code>:</code>控制对齐方式。<br>第一行为 <code> 表头行 </code>，使用竖线符将各表头隔开，此外最前和最后表头两侧分别有个竖线符将整体框起来。<br><font color=#aaaaaa size=2> 注意：表格 <strong> 首行的前一行 </strong> 必须 <strong> 留空 </strong>，否则符号写法的表格无法生效。</font><br> 第二行为 <code> 控制行 </code>，要求竖线符的数量和表头行一致，且每个竖线之间至少有一个中划线符。<br> 第三行及以下为 <code> 数据行 </code>，要求竖线符的数量和表头行一致，每两个相邻的竖线符之间是表格数据。<br> 表格默认左对齐。在第二行可以使用<code>:</code>（冒号）搭配中划线符主动控制对应列内容的对齐方式。两个竖线符之间为：</p>
+<ul>
+<li><code>:-</code>：表示左对齐</li>
+<li><code>-</code>或<code>:-:</code>：表示中对齐</li>
+<li><code>-:</code>：表示右对齐</li>
+</ul>
+<p><font color=#aaaaaa size=2>注意：无论是否主动控制对齐方式，控制行的每一列都至少要有一个中划线符。</font></p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 名字 | 性别 | 年龄 | 部门 |</span><br><span class="line">|-|-|-:|-|</span><br><span class="line">| 张三 | 男 |21| 产品 |</span><br><span class="line">| 李四 | 女 |18| 开发 |</span><br><span class="line">| 王二 | 男 |20| 销售 |</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果 </strong><br><img src="009_biaoge_001.png" alt="▲ 表格 - 符号写法 示例截图"><br><font color=#aaaaaa size=2> 注意：此处截图表格风格样式与 Hexo 默认格式不同，这取决于 Hexo 的主题。</font></p>
+<h3 id="HTML 写法"><a href="#HTML 写法" class="headerlink" title="HTML 写法"></a>HTML 写法 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;thead&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;th&gt;&#123; 表头 1&#125;&lt;&#x2F;th&gt;</span><br><span class="line">      &lt;th&gt;&#123; 表头 2&#125;&lt;&#x2F;th&gt;</span><br><span class="line">      &lt;th&gt;&#123; 表头 3&#125;&lt;&#x2F;th&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">  &lt;&#x2F;thead&gt;</span><br><span class="line">  &lt;tbody&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 1-1&#125;&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 1-2&#125;&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 1-3&#125;&lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 2-1&#125;&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 2-2&#125;&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 2-3&#125;&lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 3-1&#125;&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 3-2&#125;&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt;&#123; 内容 3-3&#125;&lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">  &lt;&#x2F;tbody&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+<p>Markdown 中的表格还可以用 HTML 标签的形式来写。跟 <em>符号写法 </em> 最大的区别主要是 <em>HTML 写法</em> 虽然无法控制整列的对齐方式，但可以单独控制每个单元格的对齐方式。控制对齐方式的方式是给需要控制元素添加<code>align</code> 标签，例：</p>
+<ul>
+<li><code>&lt;th align=&quot;middle&quot;&gt;</code></li>
+<li><code>&lt;td align=&quot;left&quot;&gt;</code></li>
+<li><code>&lt;td align=&quot;right&quot;&gt;</code></li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;thead&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;th&gt; 名字 &lt;&#x2F;th&gt;</span><br><span class="line">      &lt;th&gt; 性别 &lt;&#x2F;th&gt;</span><br><span class="line">      &lt;th&gt; 年龄 &lt;&#x2F;th&gt;</span><br><span class="line">      &lt;th&gt; 部门 &lt;&#x2F;th&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">  &lt;&#x2F;thead&gt;</span><br><span class="line">  &lt;tbody&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt; 张三 &lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt; 男 &lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td align&#x3D;&quot;right&quot;&gt;21&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt; 产品 &lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt; 李四 &lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt; 女 &lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td align&#x3D;&quot;right&quot;&gt;18&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt; 开发 &lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt; 王二 &lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt; 男 &lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td align&#x3D;&quot;right&quot;&gt;20&lt;&#x2F;td&gt;</span><br><span class="line">      &lt;td&gt; 销售 &lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">  &lt;&#x2F;tbody&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果 </strong><br><img src="009_biaoge_002.png" alt="▲ 表格 - HTML 写法 示例截图"><br><font color=#aaaaaa size=2> 注意：此处截图表格风格样式与 Hexo 默认格式不同，这取决于 Hexo 的主题。</font></p>
+<h2 id="注释"><a href="# 注释" class="headerlink" title="注释"></a>注释 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\&#123; 注释内容 &#125;</span><br></pre></td></tr></table></figure>
+<p>反斜杠后不加空格紧跟注释内容即可注释。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\## 我不再是标题</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="010_zhushi_001.png" alt="▲ 表格 - HTML 写法 示例截图"></p>
+<h2 id="分割线"><a href="# 分割线" class="headerlink" title="分割线"></a>分割线 </h2><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">___</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p>在一行起始使用 <code>***</code> 或 <code>---</code> 或 <code>___</code> 表示分割线。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">下面有条分割线 </span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"> 上下各有一条分割线 </span><br><span class="line">___</span><br><span class="line"> 上下各有一条分割线</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p><font color=#aaaaaa size=2>注意：由于 <code>---</code> 还用于二级标题，因而在使用这种方式表分割线时，其前一行必须留空。</font></p>
+<p><strong>效果</strong><br><img src="011_fengexian_001.png" alt="▲ 分割线 示例截图"></p>
+<h2 id="代码块"><a href="# 代码块" class="headerlink" title="代码块"></a>代码块 </h2><h3 id="行内代码块"><a href="# 行内代码块" class="headerlink" title="行内代码块"></a> 行内代码块 </h3><p><strong> 语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#123; 代码部分 &#125;&#96;</span><br></pre></td></tr></table></figure>
+<p>使用 <code>`</code>（重音符）框起来的部分为代码块。<br><font color=#aaaaaa size=2> 重音符：半角状态下，<strong>按住 </strong><code>Shift</code> 键，同时按下键盘字母区域的数字 1 的左侧相邻按键，输出符号即为重音符。</font><br>由于重音符是个特殊的控制字符，代码块内 <strong> 原样输出 </strong> 重音符（两个重音符中间输入重音符）无法直接实现，但可通过其它方式实现，分以下几种情况：</p>
+<ul>
+<li>如果两个重音符中间的内容除了包含重音符还 <strong> 含有其它内容</strong>，则在最外层需要用两个连续重音符夹起来。</li>
+<li>如果两个重音符中间的内容 <strong> 只包含重音符</strong>，没有其它内容，则分以下情况：<ul>
+<li>如果两个重音符中间的重音符 <strong> 只有一个</strong>，则除了用两个连续重音符夹起来以外，作为内容的这一个重音符两侧必须至少各有一个空格。</li>
+<li>如果两个重音符中间的重音符 <strong> 只有两个</strong>，分两种情况：<ul>
+<li>两个重音符 <strong> 连续</strong>，我还没有找到办法原样输出这两个重音符。</li>
+<li>两个重音符 <strong> 不连续</strong>（即两个重音符之间有空格），则将作为内容的两个重音符看做一个整体，这个整体的两侧必须至少各有一个空格。</li>
+</ul>
+</li>
+<li>如果两个重音符中间的重音符有 <strong> 两个以上</strong>，则除了用两个连续重音符夹起来以外，将作为内容的多个重音符看做一个整体，这个整体的两侧必须至少各有一个空格。</li>
+</ul>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">今天我们来了解一下 &#96;Java&#96; 的语法规则。</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="012_daimakuai_001.png" alt="▲ 行内代码块 示例截图"></p>
+<h3 id="多行代码块"><a href="# 多行代码块" class="headerlink" title="多行代码块"></a>多行代码块 </h3><p><strong> 语法</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">''</span><span class="string">' &#123;type&#125; &#123;explain&#125;</span></span><br><span class="line"><span class="string">int i = 1;</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p><font color=#aaaaaa size=2>注意：由于多行代码块的特殊性，无法在代码块内输入三个连续的重音符，这里用 <strong> 单引号代表重音符 </strong>。</font><br> 在代码的前后各起一行，只输入连续的三个重音符即可表示代码块。在第一行的三个重音符后空一格可指定 <strong> 代码语言 </strong>（可选），不区分大小写。再空一格可指定<strong> 代码块标题</strong>（可选），可用单引号 / 双引号括起来，不括也行。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;&#39;&#39; java 如何在 Java 中声明变量</span><br><span class="line">int i &#x3D; 1;</span><br><span class="line">&#39;&#39;&#39;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong><br><img src="012_daimakuai_002.png" alt="▲ 多行代码块 示例截图"></p>
+<h2 id="特殊转义字符"><a href="# 特殊转义字符" class="headerlink" title="特殊转义字符"></a>特殊转义字符 </h2><p> 在编写 Markdown 时，想要原样输出一些控制字符就需要先对其 <strong> 转义</strong>，通常的做法是在待转义字符前添加反斜杠符<code>\</code>，但有时这种方法会失效（具体哪些清空未有总结），稳定原样输出的方式是直接使用特殊字符的编码，对应如下：</p>
+<p><strong>常用 HTML 特殊字符编码对照表</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">特殊符号</th>
+<th>命名实体</th>
+<th>十进制编码</th>
+<th>中文名称</th>
+<th>英文名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#45;</td>
+<td>&amp;minus;</td>
+<td>&amp;#45;</td>
+<td>减号</td>
+<td>Minus sign</td>
+</tr>
+<tr>
+<td align="center">&#33;</td>
+<td>无</td>
+<td>&amp;#33;</td>
+<td>惊叹号</td>
+<td>Exclamation mark</td>
+</tr>
+<tr>
+<td align="center">&#34;</td>
+<td>&amp;quot;</td>
+<td>&amp;#34;</td>
+<td>双引号</td>
+<td>Quotation mark</td>
+</tr>
+<tr>
+<td align="center">&#35;</td>
+<td>无</td>
+<td>&amp;#35;</td>
+<td>数字标志</td>
+<td>Number sign</td>
+</tr>
+<tr>
+<td align="center">&#36;</td>
+<td>无</td>
+<td>&amp;#36;</td>
+<td>美元标志</td>
+<td>Dollar sign</td>
+</tr>
+<tr>
+<td align="center">&#37;</td>
+<td>无</td>
+<td>&amp;#37;</td>
+<td>百分号</td>
+<td>Percent sign</td>
+</tr>
+<tr>
+<td align="center">&#38;</td>
+<td>&amp;amp;</td>
+<td>&amp;#38;</td>
+<td>地址符</td>
+<td>Ampersand</td>
+</tr>
+<tr>
+<td align="center">&#39;</td>
+<td>无</td>
+<td>&amp;#39;</td>
+<td>单引号</td>
+<td>Apostrophe</td>
+</tr>
+<tr>
+<td align="center">&#40;</td>
+<td>无</td>
+<td>&amp;#40;</td>
+<td>左小括号</td>
+<td>Left parenthesis</td>
+</tr>
+<tr>
+<td align="center">&#41;</td>
+<td>无</td>
+<td>&amp;#41;</td>
+<td>右小括号</td>
+<td>Right parenthesis</td>
+</tr>
+<tr>
+<td align="center">&#42;</td>
+<td>无</td>
+<td>&amp;#42;</td>
+<td>星号</td>
+<td>Asterisk</td>
+</tr>
+<tr>
+<td align="center">&#43;</td>
+<td>无</td>
+<td>&amp;#43;</td>
+<td>加号</td>
+<td>Plus sign</td>
+</tr>
+<tr>
+<td align="center">&#47;</td>
+<td>无</td>
+<td>&amp;#47;</td>
+<td>斜杠</td>
+<td>Slash</td>
+</tr>
+<tr>
+<td align="center">&#60;</td>
+<td>&amp;lt;</td>
+<td>&amp;#60;</td>
+<td>小于号</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td align="center">&#61;</td>
+<td>无</td>
+<td>&amp;#61;</td>
+<td>等号</td>
+<td>Equals sign</td>
+</tr>
+<tr>
+<td align="center">&#62;</td>
+<td>&amp;gt;</td>
+<td>&amp;#62;</td>
+<td>大于号</td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td align="center">&#63;</td>
+<td>无</td>
+<td>&amp;#63;</td>
+<td>问号</td>
+<td>Question mark</td>
+</tr>
+<tr>
+<td align="center">&#64;</td>
+<td>无</td>
+<td>&amp;#64;</td>
+<td>at 符</td>
+<td>Commercial at</td>
+</tr>
+<tr>
+<td align="center">&#91;</td>
+<td>无</td>
+<td>&amp;#91;</td>
+<td>左中括号</td>
+<td>Left square bracket</td>
+</tr>
+<tr>
+<td align="center">&#92;</td>
+<td>无</td>
+<td>&amp;#92;</td>
+<td>反斜杠</td>
+<td>Reverse solidus (backslash)</td>
+</tr>
+<tr>
+<td align="center">&#93;</td>
+<td>无</td>
+<td>&amp;#93;</td>
+<td>右中括号</td>
+<td>Right square bracket</td>
+</tr>
+<tr>
+<td align="center">&#123;</td>
+<td>无</td>
+<td>&amp;#123;</td>
+<td>左大括号</td>
+<td>Left curly brace</td>
+</tr>
+<tr>
+<td align="center">&#124;</td>
+<td>无</td>
+<td>&amp;#124;</td>
+<td>竖线</td>
+<td>Vertical bar</td>
+</tr>
+<tr>
+<td align="center">&#125;</td>
+<td>无</td>
+<td>&amp;#125;</td>
+<td>右大括号</td>
+<td>Right curly brace</td>
+</tr>
+</tbody></table>
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css"><script type="text/javascript" src="/js/donate.js" successtext="复制成功!"></script><a class="pos-f tr3" id="github" href="https://github.com/Kaiyuan/donate-page" arget="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/AliPayQR.png"></li><li id="WeChat" qr="/img/WeChatQR.png"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="tags"><a href="/tags/Hexo/"><i class="fa fa-tag"></i>Hexo</a></div><div class="post-nav"><a class="pre" href="/2020/09/27/%E5%BD%93%E5%89%8D%E8%BF%90%E8%A1%8C%E6%89%B9%E5%A4%84%E7%90%86%E5%90%84%E7%A7%8D%E5%B1%9E%E6%80%A7%E7%9A%84%E8%8E%B7%E5%8F%96/">当前运行批处理各种属性的获取</a><a class="next" href="/2020/09/02/Hexo%EF%BC%9A%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo：搭建博客</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'qPYwcs4zABXiAu49EQdDpMCi-MdYXbMMI',
+  appKey:'yYHhzdIDWUIHLoLLC1J50Dc9',
+  placeholder:'为便于收到回复提醒，建议填写邮箱',
+  avatar:'',
+  guest_info:guest_info,
+  pageSize:'10'
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux%E5%AD%A6%E4%B9%A0/">Linux学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%94%BF%E5%8F%B2/">政史</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E8%AF%AD/">日语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A4%E8%AF%86%E4%B8%96%E7%95%8C/">认识世界</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/cron/" style="font-size: 15px;">cron</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/%E6%97%A5%E8%AF%AD/" style="font-size: 15px;">日语</a> <a href="/tags/Sublime/" style="font-size: 15px;">Sublime</a> <a href="/tags/%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/" style="font-size: 15px;">文件格式</a> <a href="/tags/%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/" style="font-size: 15px;">文件类型</a> <a href="/tags/VBA/" style="font-size: 15px;">VBA</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 15px;">语法</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/%E8%BF%90%E8%A1%8C/" style="font-size: 15px;">运行</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">编程</a> <a href="/tags/%E5%91%BD%E5%90%8D/" style="font-size: 15px;">命名</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E5%B7%A6%E6%B4%BE/" style="font-size: 15px;">左派</a> <a href="/tags/%E5%8F%B3%E6%B4%BE/" style="font-size: 15px;">右派</a> <a href="/tags/%E5%B7%A6%E7%BF%BC/" style="font-size: 15px;">左翼</a> <a href="/tags/%E5%8F%B3%E7%BF%BC/" style="font-size: 15px;">右翼</a> <a href="/tags/ffmpeg/" style="font-size: 15px;">ffmpeg</a> <a href="/tags/Bilibili/" style="font-size: 15px;">Bilibili</a> <a href="/tags/Tips/" style="font-size: 15px;">Tips</a> <a href="/tags/%E5%BC%BA%E8%BF%AB%E7%97%87/" style="font-size: 15px;">强迫症</a> <a href="/tags/CMD/" style="font-size: 15px;">CMD</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 15px;">批处理</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 15px;">日本</a> <a href="/tags/%E5%8C%BA%E5%88%92/" style="font-size: 15px;">区划</a> <a href="/tags/DNS/" style="font-size: 15px;">DNS</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/07/04/dev-how-to-name-better/">怎样给文件、变量和函数命名？</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/02/08/VBA-Empty%E3%80%81Nothing%E3%80%81Null%E7%9A%84%E5%8C%BA%E5%88%AB/">VBA 中 Empty、Null、Nothing 的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/02/08/VBA-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">VBA- 数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/02/05/%E6%A2%85%E6%9E%97%E7%B3%BB%E7%BB%9FDNS%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/">梅林系统 DNS 自定义设置方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/04/12/Sublime%E5%85%B3%E8%81%94%E5%90%8E%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87%E5%9B%BE%E6%A0%87%E5%88%86%E8%BE%A8%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BA%94%E5%AF%B9/">Sublime 关联常见文本格式后难以通过图标分辨文件类型的应对</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/02/17/%E7%AA%97%E5%8F%A3%E7%A7%BB%E5%87%BA%E5%B1%8F%E5%B9%95%E5%90%8E%E7%9A%84%E5%BA%94%E5%AF%B9%E6%96%B9%E5%BC%8F/">窗口移出屏幕后的应对</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/02/07/%E5%90%88%E5%B9%B6B%E7%AB%99%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8D%95%E7%8B%AC%E8%A7%86%E9%A2%91%E5%92%8C%E5%8D%95%E7%8B%AC%E9%9F%B3%E9%A2%91/">合并 B 站下载的单独视频和单独音频</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/28/Linux%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/">Linux 后台运行程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/18/%E4%B8%AD%E7%83%9F%E6%96%B0%E5%95%86%E7%9B%9F%E5%B0%8F%E5%B7%A5%E5%85%B7/">中烟新商盟小工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/27/TF%E9%97%AA%E5%AD%98%E5%8D%A1%E9%80%9F%E5%BA%A6%E5%8F%82%E9%80%9F%E7%8E%87%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/">TF 闪存卡速度参速率参数说明</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://notepad.sdokio.cn/" title="Edith:在线文本编辑器" target="_blank">Edith:在线文本编辑器</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">SoyaDokio的博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=0.0.0"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
